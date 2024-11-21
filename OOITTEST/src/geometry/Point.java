@@ -13,6 +13,7 @@ public class Point {
 
 	}
 	
+	//default konstruktor
 	public Point (int x, int y) {
 		this.x= x;
 		this.y = y;
@@ -37,7 +38,26 @@ public class Point {
 		double distance = Math.sqrt(dx*dx + dy*dy); //udaljenost u 2D izmedju (x1,y1) i (x2,y2) = pitagorina t
 		return distance;
 	}
+	public boolean Contains(int x, int y) {
+		return distance(new Point(x,y)) <=2;
+		//jel ovo 2 proizvoljno ili ima u zadatku?
+	}
 	
+	@Override
+	public String toString() {
+		return "(" + x + ", " + y +")";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Point) {
+			Point temp = (Point)obj;
+			if(x == temp.getX() && y == temp.getY()) {
+				return true;
+			}
+		}
+		return false; //ako nije true vraca false
+	}
 	//get za vracanje vrednosti
 	public int getX() {
 		return x;

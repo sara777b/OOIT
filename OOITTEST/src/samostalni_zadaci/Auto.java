@@ -23,7 +23,7 @@ public class Auto {
 		//ako bi stavili odma u if (boolean == true) da li ne bi morali imati else
 	}
 	
-	public void Stani (int brzina) {
+	public void Stani () {
 		if (ukljucen&& brzina < 50) {
 			System.out.println("Auto ce se zaustaviti na 4 sekunde");
 		} 
@@ -38,7 +38,7 @@ public class Auto {
 		}
 	}
 	
-	public void oAutu(String marka) {
+	public void oAutu() {
 		System.out.println("Marka automobila je " + this.marka + ".");
 		if (ukljucen) {
 			System.out.println("Auto je ukljucen i trenutna brzina je " + this.brzina + ".");
